@@ -30,9 +30,8 @@ logotype
 
 log_message INFO "Starting Arch Linux Installation Script"
 
-
 # Call sub-scripts
-
+$SCRIPT_DIRECTORY/scripts/prepare.sh
 
 
 log_message INFO "Installation completed successfully."
