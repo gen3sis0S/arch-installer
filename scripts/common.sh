@@ -80,6 +80,9 @@ log_message () {
         SUGGESTION)
             echo -e "\e[34m[!]\e[0m $MESSAGE"
             ;;
+        CONFIRMATION_ERROR)
+            echo -e "\e[31m[X]\e[0m $MESSAGE \n"
+            ;;
         *)
             echo -e "\e[34m[LOG]\e[0m $MESSAGE \n"
             ;;
@@ -130,8 +133,13 @@ prompt_yes_no() {
 section_header() {
     local TITLE="$1"
     echo    "|--------------------------------------------------------------------------|"
-    echo -e "|\e[96m                           $TITLE                        \e[0m|" 
+    echo -e "\e[96m                           $TITLE                                \e[0m" 
     echo    "|--------------------------------------------------------------------------|"
+}
+
+section_subheader() {
+    local SUBTITLE="$1"
+    echo -e "\e[35m$SUBTITLE\e[0m"
 }
 
 validate_locale() {
