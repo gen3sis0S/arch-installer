@@ -1,0 +1,11 @@
+
+packages:
+  - nmap
+  - wireshark-qt
+  - metasploit
+  - john
+  - hydra
+  - aircrack-ng
+  - burpsuite
+  - sqlmap
+  - gobuster
